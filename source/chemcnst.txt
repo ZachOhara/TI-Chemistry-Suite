@@ -1,0 +1,33 @@
+Menu("Chemistry ConstantsLibrary","Avogadro's number",AN,"Electron mass (kg)",EM,"Plank's constant (j*s)",PC,"Speed of light (m/s)",SL,"Ideal gas constantLP/nK)",GC,"STP Molar Volume (L/mol)",MV)
+Stop
+Lbl AA
+Disp Ans
+Goto A2
+Lbl AN:
+"Avogadros num"
+6.022e23
+Goto AA
+Lbl EM
+"e- mass"
+9.109e-31
+Goto AA
+Lbl PC:
+"Planks const"
+6.626e-34
+Goto AA
+Lbl SL:
+"C"
+Disp "3.0e8"
+3.00e8
+Goto AA
+Lbl GC:
+"Ideal gas constant"
+Disp "in (L atm)/(mol K)
+.082057
+Goto AA
+Lbl MV
+"STP Density"
+Disp "in L/mol"
+22.4
+Goto AA
+Lbl Á2:

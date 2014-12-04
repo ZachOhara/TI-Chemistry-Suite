@@ -1,0 +1,37 @@
+.082057->R
+Menu("Solve for...","Pressure",P,"Volume",V,"Moles",N,"Temperature",T)
+Lbl P
+Disp "P=nRT/V"
+Input "Moles: ",N
+Input "Temp (K): ",T
+Input "Vol (L): ",V
+NRT/VüP
+Disp "In atm:",P,"Stored to P"
+Pause 
+Stop
+Lbl V
+Disp "V=nRT/P"
+Input "Moles: ",N
+Input "Temp (K): ",T
+Input "Pressure (atm): ",P
+(NRT)/PüV
+Disp "In liters:",V,"Stored to V"
+Pause 
+Stop
+Lbl N
+Disp "n=PV/RT"
+Input "Temp (K): ",T
+Input "Pressure (atm): ",P
+Input "Vol (L): ",V
+PV/(RT)üN
+Disp "Moles:",N,"Stored to N"
+Pause 
+Stop
+Lbl T
+Disp "T=PV/nR"
+Input "Pressure (atm): ",P
+Input "Vol (L): ",V
+Input "Moles: ",N
+PV/(NR)üT
+Disp "In K:",T,"In C",T-273,"Stored to T"
+Pause 
