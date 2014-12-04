@@ -1,0 +1,84 @@
+ClrHome
+Disp "Is it soluble?",""
+Disp "Do not include charge"
+Input "Cation: ",Str1
+Input "Anion: ",Str2
+Disp ""
+"Rule 1: group 1A and ammonium are always soluble"
+If Str1="H" or Str1="Li" or Str1="Na" or Str1="K" or Str1="Rb" or Str1="Cs" or Str1="Fr"
+Then
+Disp "Soluble","Group 1A"
+Goto Z
+End
+If Str1="NH4"
+Then
+Disp "Soluble","Ammonium"
+Goto Z
+End
+"Rule 2: Acetates and nitrates are soluble"
+If Str2="C2H3O2"
+Then
+Disp "Soluble","Acetate"
+Goto Z
+End
+If Str2="NO3"
+Then
+Disp "Soluble","Nitrate"
+Goto Z
+End
+"Rule 3: Most halides are soluble. Except: Ag+,Hg+,Pb2+"
+If Str2="F" or Str2="Cl" or Str2="Br" or Str2="I" or Str2="At"
+Then
+If Str1="Ag" or Str1="Hg2" or Str1="Pb"
+Then
+Disp "Insoluble","Halide exception"
+Else
+Disp "Soluble","Halide"
+End
+Goto Z
+End
+"Rule 4: Most sulfates are soluble. Except: Ca,Sr,Ba,Ag2,Hg2,Pb"
+If Str2="SO4"
+Then
+If Str1="Ca" or Str1="Sr" or Str1="Ba" or Str1="Ag" or Str1="Hg2" or Str1="Pb"
+Then
+Disp "Insoluble","Sulfate exception"
+Else
+Disp "Soluble","Sulfate"
+End
+Goto Z
+End
+"Rule 5: Most carbonates are insoluble"
+If Str2="CO3"
+Then
+Disp "Insoluble","Carbonate"
+Goto Z
+End
+"Rule 6: Most phosphates are insoluble"
+If Str2="PO4"
+Then
+Disp "Insoluble","Phosphate"
+Goto Z
+End
+"Rule 7: Most sulfides are insoluble"
+If Str2="S"
+Then
+Disp "Insoluble","Sulfide"
+Goto Z
+End
+"Rule 8: Most hydroxides are insoluble"
+If Str2="OH"
+Then
+If Str1="Ca" or Str1="Sr" or Str1="Ba"
+Then
+Disp "Soluble","Hydroxide exception"
+Else
+Disp "Insoluble","Hydroxide"
+End
+Goto Z
+End
+"Assume nothing else is soluble"
+Disp "No result found","Assume insoluble"
+Lbl Z
+Pause 
+Stop
